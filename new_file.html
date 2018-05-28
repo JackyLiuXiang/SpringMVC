@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/recommend.css"/>
+		<link rel="stylesheet" href="css/style.css" />
+		<title></title>
+	</head>
+	<body>
+		
+		<header class="header">
+			<!--
+        	作者：offline
+        	时间：2018-05-16
+        	描述：导航栏
+        -->
+			<div class="container-inner">
+				<div class="headTipe">
+					<a href="/">
+						<span class="yusi-mono" style="font-family: STCaiyun;">考研！！！           我们帮你</span>
+
+					</a>
+				</div>
+			</div>
+		</header>
+		<div class="allbackground">
+		</div>
+		
+  <div class="container clearfix">
+    <div class="zsml-row clearfix">
+    <div class="zsml-form-box">
+      <h2>2018年硕士院校推荐</h2>
+      <div class="zsml-summary">
+        其中至少填写一项。
+      </div>
+      <div class="zsml-form">
+      <form name="form2" method="post" id="form2" action= "/zsml/queryAction.do" >
+        <table border="0" cellspacing="0" cellpadding="0">
+        <colgroup>
+          <col width="120">
+          <col width="260">
+          <col width="120">
+          <col width="260">
+        </colgroup>
+            <tbody>
+              <tr>
+                <td align="right"><label>向往的省市</label></td>
+                <td align="left">
+
+                  <select name="ssdm" id="ssdm" class="ch-select" >
+                    <option value="" selected>--选择省市--</option>
+                  </select>
+                  </td>
+                 <td align="right"><label>招生单位</label></td>
+                <td align="left">
+                <input type="text" id="dwmc" name="dwmc" class="ch-input" placeholder="输入招生单位名称"  value="" maxlength="40" />
+                  </td>
+                 
+              </tr>
+              <tr>
+                <td align="right"><label>门类类别</label></td>
+                <td align="left">
+                <select name="mldm" id="mldm"  class="ch-select" onchange="initYjxk();" >
+                    <option value="" selected>--选择门类--</option>
+                  </select>
+                  <input type="hidden" name="mlmc" id="mlmc" />
+                  </td>
+                 <td  align="right">
+                <span class="zsml-required">*</span>
+                 <label id="xklbstr">学科类别</label></td>
+                <td align="left">
+                <select name="yjxkdm" id="yjxkdm" class="ch-select"  onchange="initZy();">
+                    <option value="" selected>--选择学科类别--</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+              <td align="right"><label>专业名称</label></td>
+                 <td align="left">
+                <select name="zymc" id="zymc"  class="ch-select" >
+                    <option value="" selected>--选择专业--</option>
+                  </select>
+                  </td>
+                  <td  align="right">
+                <span class="zsml-required"></span>
+                 <label>学习方式</label></td>
+                <td align="left">
+                  <select name="xxfs" id="xxfs" class="ch-select" >
+                    <option value="" selected>--选择学习方式--</option>
+                    <option value="1" >全日制</option>
+                    <option value="2" >非全日制</option>
+                  </select>
+                </td>
+              </tr>
+ 
+               <tr>
+              <td class="text_center" colspan="4"><input type="button" name="button" onclick="return zsmlSearchFormCheck()" class="ch-btn ch-btn-big" value="查询" /></td>
+              </tr>
+              
+            </tbody>
+        </table>
+       </form>
+      </div>
+      <!-- zsml 首页 表单 end -->
+    </div>
+
+    <!--<div style="margin-top: 20px;">
+        <script type="text/javascript">showShortCut('1861301794')</script>
+    </div>-->
+
+    </div>
+    <!-- zsml-首页主体 end -->
+  </div>
+
+	</body>
+</html>
